@@ -16,7 +16,8 @@
 # ""                                        =>  false
 
 def generateHashtag(str)
-  # ...
+  new_str = str.split(" ").map(&:capitalize).join("")
+  new_str == "" || new_str.length > 139 ? false : new_str.prepend('#')
 end
 
 # CODEWARS 2
@@ -41,7 +42,23 @@ end
 # Attention: If the number has leading zeros the amount of digits should be considered.
 
 def increment_string(input)
-  #your code here
+  if(!input.match?(/[\d]/))
+    return input << "1"
+  end
+  num_str = input.gsub(/[a-z]/, "")
+  num_arr = num_str.chars.map(&:to_i)
+  num_arr[num_arr.length - 1] += 1
+  for i in (num_arr.length - 1).downto(1)
+    if num_arr[i] == 10
+      num_arr[i] = 0
+      num_arr[i - 1] += 1
+    end
+  end
+  if num_arr[0] == 10
+    num_arr[0] = 0
+    num_arr.unshift(1)
+  end
+  "#{input.gsub(/[\d]/, "")}#{num_arr.join("")}"
 end
 
 # CODEWARS 3
