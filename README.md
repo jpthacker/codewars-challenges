@@ -31,3 +31,6 @@ Once you've forked the repo, you can customise the codewars file to suit your ne
 
 [Git branching (Makers)](https://github.com/makersacademy/ruby_foundations/blob/main/GIT_BRANCH_GUIDANCE.md) 
 [More branches](https://www.freecodecamp.org/news/git-switch-branch/)
+[Pull requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)
+[Git conflicts](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-on-github)
+
