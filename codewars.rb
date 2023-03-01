@@ -16,8 +16,10 @@
 # ""                                        =>  false
 
 def generateHashtag(str)
-  # ...
+  new_str = str.split(" ").map(&:capitalize).join("")
+  new_str == "" || new_str.length > 139 ? false : new_str.prepend('#')
 end
+
 
 # CODEWARS 2
 # URL - https://www.codewars.com/kata/54a91a4883a7de5d7800009c/train/ruby
