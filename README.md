@@ -6,7 +6,7 @@ The codewars.rb file in this repo contains four challenges taken from codewars.c
 
 Each challenge, or 'Kata', has an accompanying URL, which should take you to the actual Kata page  on codewars.com. That's where you'll be able to test your code, submit your solution, gain 'honor' and increase your rank, etc. The idea here is that you'll write your solutions to these challenges in VS Code for purpose of practicing git branching, pull requests and merging. 
 
-> Note: The challenges are supposed to be ordered in terms of difficulty, but this might depend of the individual and their experience. 
+> Note: The challenges are supposed to be ordered in terms of difficulty, but this might depend on the individual and their experience. 
 
 
 ## Steps to follow
