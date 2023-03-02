@@ -102,6 +102,8 @@ def count_smileys(arr)
   return count
 end
 
+# Well done, George
+
 # CODEWARS 5
 # URL - https://www.codewars.com/kata/54a91a4883a7de5d7800009c/train/ruby
 
