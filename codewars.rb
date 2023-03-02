@@ -1,4 +1,19 @@
 # CODEWARS 1
+# https://www.codewars.com/kata/5264d2b162488dc400000001/train/ruby
+
+# Write a function that takes in a string of one or more words, and returns the same string, but with all five or more letter words reversed (Just like the name of this Kata). Strings passed in will consist of only letters and spaces. Spaces will be included only when more than one word is present.
+
+# Examples:
+
+# spinWords( "Hey fellow warriors" ) => returns "Hey wollef sroirraw" 
+# spinWords( "This is a test") => returns "This is a test" 
+# spinWords( "This is another test" )=> returns "This is rehtona test"
+
+def spin_words(string)
+  #Your code here
+end
+
+# CODEWARS 2
 # URL - https://www.codewars.com/kata/52449b062fb80683ec000024/train/ruby
 
 # The marketing team is spending way too much time typing in hashtags.
@@ -17,51 +32,36 @@
 
 def generateHashtag(str)
   new_str = str.split(" ").map(&:capitalize).join("")
-  new_str == "" || new_str.length > 139 ? false : new_str.prepend('#')
-end
-
-# CODEWARS 2
-# URL - https://www.codewars.com/kata/54a91a4883a7de5d7800009c/train/ruby
-
-# Your job is to write a function which increments a string, to create a new string.
-
-# If the string already ends with a number, the number should be incremented by 1.
-# If the string does not end with a number. the number 1 should be appended to the new string.
-# Examples:
-
-# foo -> foo1
-
-# foobar23 -> foobar24
-
-# foo0042 -> foo0043
-
-# foo9 -> foo10
-
-# foo099 -> foo100
-
-# Attention: If the number has leading zeros the amount of digits should be considered.
-
-def increment_string(input)
-  if (!input[0] || input[-1].match?(/[a-z]/))
-    return input << "1"
-  end
-  numbers_arr = input.gsub(/[a-z]/, "-").chars.join("").split("-")
-  num_arr = numbers_arr[-1].chars.map(&:to_i)
-  num_arr[num_arr.length - 1] += 1
-  for i in (num_arr.length - 1).downto(1)
-    if num_arr[i] == 10
-      num_arr[i] = 0
-      num_arr[i - 1] += 1
-    end
-  end
-  if num_arr[0] == 10
-    num_arr[0] = 0
-    num_arr.unshift(1)
-  end
-  "#{input.gsub(numbers_arr[-1], "")}#{num_arr.join("")}"
+  new_str == "" || new_str.length > 139 ? false : new_str.prepend("#")
 end
 
 # CODEWARS 3
+# https://www.codewars.com/kata/5a00a8b5ffe75f8888000080/train/ruby
+
+# Given an array containing only zeros and ones, find the index of the zero that, if converted to one, will make the longest sequence of ones.
+
+# For instance, given the array:
+
+# [1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 1, 1]
+# replacing the zero at index 10 (counting from 0) forms a sequence of 9 ones:
+
+# [1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1]
+#                   '------------^------------'
+# Your task is to complete the function that determines where to replace a zero with a one to make the maximum length subsequence.
+
+# Notes:
+
+# If there are multiple results, return the last one:
+# [1, 1, 0, 1, 1, 0, 1, 1] ==> 5
+
+# The array will always contain only zeros and ones.
+# Can you do this in one pass?
+
+def replace_zero(arr)
+  #..
+end
+
+# CODEWARS 4
 # URL - https://www.codewars.com/kata/583203e6eb35d7980400002a/ruby
 
 # Given an array (arr) as an argument complete the function countSmileys that should return the total number of smiling faces.
@@ -102,7 +102,48 @@ def count_smileys(arr)
   return count
 end
 
-#  CODEWARS 4
+# CODEWARS 5
+# URL - https://www.codewars.com/kata/54a91a4883a7de5d7800009c/train/ruby
+
+# Your job is to write a function which increments a string, to create a new string.
+
+# If the string already ends with a number, the number should be incremented by 1.
+# If the string does not end with a number. the number 1 should be appended to the new string.
+# Examples:
+
+# foo -> foo1
+
+# foobar23 -> foobar24
+
+# foo0042 -> foo0043
+
+# foo9 -> foo10
+
+# foo099 -> foo100
+
+# Attention: If the number has leading zeros the amount of digits should be considered.
+
+def increment_string(input)
+  if (!input[0] || input[-1].match?(/[a-z]/))
+    return input << "1"
+  end
+  numbers_arr = input.gsub(/[a-z]/, "-").chars.join("").split("-")
+  num_arr = numbers_arr[-1].chars.map(&:to_i)
+  num_arr[num_arr.length - 1] += 1
+  for i in (num_arr.length - 1).downto(1)
+    if num_arr[i] == 10
+      num_arr[i] = 0
+      num_arr[i - 1] += 1
+    end
+  end
+  if num_arr[0] == 10
+    num_arr[0] = 0
+    num_arr.unshift(1)
+  end
+  "#{input.gsub(numbers_arr[-1], "")}#{num_arr.join("")}"
+end
+
+#  CODEWARS 6
 #  URL - https://www.codewars.com/kata/51b62bf6a9c58071c600001b/train/ruby
 
 #  Create a function taking a positive integer between 1 and 3999 (both included) as its parameter and returning a string containing the Roman Numeral representation of that integer.
