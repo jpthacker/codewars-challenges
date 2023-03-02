@@ -1,4 +1,27 @@
 # CODEWARS 1
+# https://www.codewars.com/kata/563fb342f47611dae800003c/train/ruby
+
+# Create a function that will trim a string (the first argument given) if it is longer than the requested maximum string length (the second argument given). The result should also end with "..."
+
+# These dots at the end also add to the string length.
+
+# For example, trim("Creating kata is fun", 14) should return "Creating ka..."
+
+# If the string is smaller or equal than the maximum string length, then simply return the string with no trimming or dots required.
+
+# e.g. trim("Code Wars is pretty rad", 50) should return "Code Wars is pretty rad"
+
+# If the requested string length is smaller than or equal to 3 characters, then the length of the dots is not added to the string length.
+
+# e.g. trim("He", 1) should return "H...", because 1 <= 3
+
+# Requested maximum length will be greater than 0. Input string will not be empty.
+
+def trim(string, size)
+  #your code here
+end
+
+# CODEWARS 2
 # URL - https://www.codewars.com/kata/52449b062fb80683ec000024/train/ruby
 
 # The marketing team is spending way too much time typing in hashtags.
@@ -17,10 +40,62 @@
 
 def generateHashtag(str)
   new_str = str.split(" ").map(&:capitalize).join("")
-  new_str == "" || new_str.length > 139 ? false : new_str.prepend('#')
+  new_str == "" || new_str.length > 139 ? false : new_str.prepend("#")
 end
 
-# CODEWARS 2
+# CODEWARS 3
+# https://www.codewars.com/kata/5a00a8b5ffe75f8888000080/train/ruby
+
+# Given an array containing only zeros and ones, find the index of the zero that, if converted to one, will make the longest sequence of ones.
+
+# For instance, given the array:
+
+# [1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 1, 1]
+# replacing the zero at index 10 (counting from 0) forms a sequence of 9 ones:
+
+# [1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1]
+#                   '------------^------------'
+# Your task is to complete the function that determines where to replace a zero with a one to make the maximum length subsequence.
+
+# Notes:
+
+# If there are multiple results, return the last one:
+# [1, 1, 0, 1, 1, 0, 1, 1] ==> 5
+
+# The array will always contain only zeros and ones.
+# Can you do this in one pass?
+
+def replace_zero(arr)
+  #..
+end
+
+# CODEWARS 4
+# URL - https://www.codewars.com/kata/583203e6eb35d7980400002a/ruby
+
+# Given an array (arr) as an argument complete the function countSmileys that should return the total number of smiling faces.
+
+# Rules for a smiling face:
+
+# Each smiley face must contain a valid pair of eyes. Eyes can be marked as : or ;
+# A smiley face can have a nose but it does not have to. Valid characters for a nose are - or ~
+# Every smiling face must have a smiling mouth that should be marked with either ) or D
+# No additional characters are allowed except for those mentioned.
+
+# Valid smiley face examples: :) :D ;-D :~)
+# Invalid smiley faces: ;( :> :} :]
+
+# Example
+# countSmileys([':)', ';(', ';}', ':-D']);       // should return 2;
+# countSmileys([';D', ':-(', ':-)', ';~)']);     // should return 3;
+# countSmileys([';]', ':[', ';*', ':$', ';-D']); // should return 1;
+# Note
+# In case of an empty array return 0. You will not be tested with invalid input (input will always be an array). Order of the face (eyes, nose, mouth) elements will always be the same.
+
+def count_smileys(arr)
+  #your code here
+end
+
+# CODEWARS 5
 # URL - https://www.codewars.com/kata/54a91a4883a7de5d7800009c/train/ruby
 
 # Your job is to write a function which increments a string, to create a new string.
@@ -61,33 +136,7 @@ def increment_string(input)
   "#{input.gsub(numbers_arr[-1], "")}#{num_arr.join("")}"
 end
 
-# CODEWARS 3
-# URL - https://www.codewars.com/kata/583203e6eb35d7980400002a/ruby
-
-# Given an array (arr) as an argument complete the function countSmileys that should return the total number of smiling faces.
-
-# Rules for a smiling face:
-
-# Each smiley face must contain a valid pair of eyes. Eyes can be marked as : or ;
-# A smiley face can have a nose but it does not have to. Valid characters for a nose are - or ~
-# Every smiling face must have a smiling mouth that should be marked with either ) or D
-# No additional characters are allowed except for those mentioned.
-
-# Valid smiley face examples: :) :D ;-D :~)
-# Invalid smiley faces: ;( :> :} :]
-
-# Example
-# countSmileys([':)', ';(', ';}', ':-D']);       // should return 2;
-# countSmileys([';D', ':-(', ':-)', ';~)']);     // should return 3;
-# countSmileys([';]', ':[', ';*', ':$', ';-D']); // should return 1;
-# Note
-# In case of an empty array return 0. You will not be tested with invalid input (input will always be an array). Order of the face (eyes, nose, mouth) elements will always be the same.
-
-def count_smileys(arr)
-  #your code here
-end
-
-#  CODEWARS 4
+#  CODEWARS 6
 #  URL - https://www.codewars.com/kata/51b62bf6a9c58071c600001b/train/ruby
 
 #  Create a function taking a positive integer between 1 and 3999 (both included) as its parameter and returning a string containing the Roman Numeral representation of that integer.
