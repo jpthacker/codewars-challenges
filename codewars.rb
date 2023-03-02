@@ -41,38 +41,6 @@ end
 
 # Attention: If the number has leading zeros the amount of digits should be considered.
 
-# def increment_string(input)
-#   if(!input.match?(/[\d]/))
-#     return input << "1"
-#   end
-#     def increment_num(num_arr)
-#   num_arr[num_arr.length - 1] += 1
-#   for i in (num_arr.length - 1).downto(1)
-#     if num_arr[i] == 10
-#       num_arr[i] = 0
-#       num_arr[i - 1] += 1
-#     end
-#   end
-#   if num_arr[0] == 10
-#     num_arr[0] = 0
-#     num_arr.unshift(1)
-#   end
-#     end
-  
-#   if input.match?(/^[a-zA-Z]*\d*$/)
-#     num_arr = input.gsub(/[a-z]/, "").chars.map(&:to_i)
-  
-
-
-#     increment_num(num_arr)
-#   return "#{input.gsub(/[\d]/, "")}#{num_arr.join("")}"
-#     end
-#   regex_arr = input.match(/\d+\z/)[0].chars.map(&:to_i)
-#   increment_num(regex_arr)
-#   "#{input.gsub(/[\d]/, "")}#{regex_arr.join("")}"
-# end
-
-
 def increment_string(input)
   if (!input[0] || input[-1].match?(/[a-z]/))
     return input << "1"
