@@ -84,7 +84,22 @@ end
 # In case of an empty array return 0. You will not be tested with invalid input (input will always be an array). Order of the face (eyes, nose, mouth) elements will always be the same.
 
 def count_smileys(arr)
-  #your code here
+  count = 0
+  arr.each { |smile|
+    smile.gsub(" ", "")
+    if smile.length == 2
+      if smile[0].match?(/[:;]/) && smile[1].match?(/[D\)]/)
+        count += 1
+      end
+    elsif smile.length == 3
+      if smile[0].match?(/[:;]/) && smile[1].match?(/[-~]/) && smile[2].match?(/[D\)]/)
+        count += 1
+      end
+    else 
+        count += 0
+    end
+  }
+  return count
 end
 
 #  CODEWARS 4
