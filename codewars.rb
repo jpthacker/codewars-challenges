@@ -78,7 +78,7 @@ def increment_string(input)
     return input << "1"
   end
   numbers_arr = input.gsub(/[a-z]/, "-").chars.join("").split("-")
-  num_arr = filtered_arr[-1].chars.map(&:to_i)
+  num_arr = numbers_arr[-1].chars.map(&:to_i)
   num_arr[num_arr.length - 1] += 1
   for i in (num_arr.length - 1).downto(1)
     if num_arr[i] == 10
