@@ -17,7 +17,7 @@
 
 def generateHashtag(str)
   new_str = str.split(" ").map(&:capitalize).join("")
-  new_str == "" || new_str.length > 139 ? false : new_str.prepend("#")
+  new_str == "" || new_str.length > 139 ? false : new_str.prepend('#')
 end
 
 # CODEWARS 2
