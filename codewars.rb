@@ -1,24 +1,16 @@
 # CODEWARS 1
-# https://www.codewars.com/kata/563fb342f47611dae800003c/train/ruby
+# https://www.codewars.com/kata/5264d2b162488dc400000001/train/ruby
 
-# Create a function that will trim a string (the first argument given) if it is longer than the requested maximum string length (the second argument given). The result should also end with "..."
+# Write a function that takes in a string of one or more words, and returns the same string, but with all five or more letter words reversed (Just like the name of this Kata). Strings passed in will consist of only letters and spaces. Spaces will be included only when more than one word is present.
 
-# These dots at the end also add to the string length.
+# Examples:
 
-# For example, trim("Creating kata is fun", 14) should return "Creating ka..."
+# spinWords( "Hey fellow warriors" ) => returns "Hey wollef sroirraw" 
+# spinWords( "This is a test") => returns "This is a test" 
+# spinWords( "This is another test" )=> returns "This is rehtona test"
 
-# If the string is smaller or equal than the maximum string length, then simply return the string with no trimming or dots required.
-
-# e.g. trim("Code Wars is pretty rad", 50) should return "Code Wars is pretty rad"
-
-# If the requested string length is smaller than or equal to 3 characters, then the length of the dots is not added to the string length.
-
-# e.g. trim("He", 1) should return "H...", because 1 <= 3
-
-# Requested maximum length will be greater than 0. Input string will not be empty.
-
-def trim(string, size)
-  #your code here
+def spin_words(string)
+  #Your code here
 end
 
 # CODEWARS 2
