@@ -2,7 +2,7 @@
 
 ## The Basic Idea
 
-The codewars.rb file in this repo contains four challenges taken from codewars.com. You'll need to set up an account on codewars to fully benefit from these exercises. 
+The codewars.rb file in this repo contains six challenges taken from codewars.com. You'll need to set up an account on codewars to fully benefit from these exercises. 
 
 Each challenge, or 'Kata', has an accompanying URL, which should take you to the actual Kata page  on codewars.com. That's where you'll be able to test your code, submit your solution, gain 'honor' and increase your rank, etc. The idea here is that you'll write your solutions to these challenges in VS Code for the purpose of practicing git branching, pull requests, merging and resolving conflicts. 
 
