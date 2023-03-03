@@ -31,8 +31,7 @@ end
 # ""                                        =>  false
 
 def generateHashtag(str)
-  new_str = str.split(" ").map(&:capitalize).join("")
-  new_str == "" || new_str.length > 139 ? false : new_str.prepend("#")
+  #Your code here
 end
 
 # CODEWARS 3
@@ -58,7 +57,7 @@ end
 # Can you do this in one pass?
 
 def replace_zero(arr)
-  #..
+  #Your code here
 end
 
 # CODEWARS 4
@@ -84,22 +83,7 @@ end
 # In case of an empty array return 0. You will not be tested with invalid input (input will always be an array). Order of the face (eyes, nose, mouth) elements will always be the same.
 
 def count_smileys(arr)
-  count = 0
-  arr.each { |smile|
-    smile.gsub(" ", "")
-    if smile.length == 2
-      if smile[0].match?(/[:;]/) && smile[1].match?(/[D\)]/)
-        count += 1
-      end
-    elsif smile.length == 3
-      if smile[0].match?(/[:;]/) && smile[1].match?(/[-~]/) && smile[2].match?(/[D\)]/)
-        count += 1
-      end
-    else 
-        count += 0
-    end
-  }
-  return count
+  #Your code here
 end
 
 # Well done, George
@@ -126,23 +110,7 @@ end
 # Attention: If the number has leading zeros the amount of digits should be considered.
 
 def increment_string(input)
-  if (!input[0] || input[-1].match?(/[a-z]/))
-    return input << "1"
-  end
-  numbers_arr = input.gsub(/[a-z]/, "-").chars.join("").split("-")
-  num_arr = numbers_arr[-1].chars.map(&:to_i)
-  num_arr[num_arr.length - 1] += 1
-  for i in (num_arr.length - 1).downto(1)
-    if num_arr[i] == 10
-      num_arr[i] = 0
-      num_arr[i - 1] += 1
-    end
-  end
-  if num_arr[0] == 10
-    num_arr[0] = 0
-    num_arr.unshift(1)
-  end
-  "#{input.gsub(numbers_arr[-1], "")}#{num_arr.join("")}"
+  #Your code here
 end
 
 #  CODEWARS 6
@@ -170,5 +138,5 @@ end
 # More about roman numerals - http://en.wikipedia.org/wiki/Roman_numerals
 
 def solution(number)
-  # convert the number to a roman numeral string
+  #Your code here
 end
